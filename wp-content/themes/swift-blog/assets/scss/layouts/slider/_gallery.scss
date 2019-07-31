@@ -1,0 +1,39 @@
+.gallery-item{
+    display: flex !important;
+    justify-content: center;
+}
+.gallery{
+    &.gallery-columns-1{
+        margin-bottom: 0;
+        figure{
+            margin: 0;
+        }
+    }
+} 
+figure{
+    a{
+        border: 0;
+    }
+}
+.wp-block-gallery{
+    li{
+        overflow: hidden;
+        img{
+            @include transition(transform,0.3s,linear);
+            @include backface();
+            &:hover{
+                transform: scale(1.1,1.1);
+            }
+        }
+    }
+}
+.wp-block-image{
+    overflow: hidden;
+        img{
+            @include transition(transform,0.3s,linear);
+            @include backface();
+            &:hover{
+                transform: scale(0.9,0.9);
+            }
+        }
+}
